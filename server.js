@@ -17,6 +17,7 @@ app.post("/", (req, res) => {
   console.log("in post");
  // console.log("posted: ",req.body);
  // receiveData(req.body);
+ res.status(200).send("work")
 });
 
 // Start the server
