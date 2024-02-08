@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+//const functions = require('./public/scripts');
 // Define the directory for static files (CSS, images)
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.post("/", (req, res) => {
   console.log("in post");
   console.log("posted: ",req.body);
-  receiveData(req.body);
+ // receiveData(req.body);
 });
 
 // Start the server
