@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="heb" dir="rtl">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico">--> 
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpeg">
+
+    <title>Tehila Sargovski</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+
+       
+        <div id="popup-container">
+            <div id="close-btn" onclick="closePopup()">X</div>
+            <h2>תודה רבה!</h2>
+            <p>פרטיך נשלחו בהצלחה ונחזור אליך בהקדם.</p>
+        </div>
+    
+        <div id="popup-overlay" onclick="closePopup()"></div>
+    
+        
+
+        <nav class="navbar">
+            <img src="images/manuIcon.png" alt="logo" class="menu-icon" onclick="togglemenu()"/>
+
+            <div class="menu">
+                <ul id="menuList">
+                    <li><a href="#start_page">ראשי</a></li>
+                    <li><a href="#about_page">אודתינו</a></li>
+                    <li><a href="#form_page">השארת פרטים</a></li>
+                  <!--  <li><a href="#contact_page">יצירת קשר</a></li>-->
+                </ul>
+            </div>
+            
+            <div class="icon" href="index.html">
+                <img src="images/logo.jpeg" alt="logo"/>
+            </div>
+            
+        </nav>
+
+
+     
+
+        <div class="container">
+
+            <section class="start_page" id="start_page">
+                <img src="images/start_page.jpeg" alt="error" />
+            </section>
+            
+            <section class="about_page" id="about_page">
+                <img src="images/about_page.jpeg" alt="error" />
+
+            </section>
+            
+            <section class="form_page" id="form_page">
+                <div class="form">
+                    <h2>השאר פרטים ונחזור אליך בהקדם</h2>
+                    <input type="text" id="name" name="name" placeholder="שם" required>
+                    <input type="tel" id="phone" name="phone" placeholder="טלפון" required>
+                    <input type="email" id="email" name="email" placeholder="אימיל" required>
+                    <button class="btn" type="button" id="submitButton" onclick="submitForm()">שלח</button>
+                    <!--<button class="btn" type="button" id="submitButton" disabled onclick="submitForm()">שלח</button>-->
+                </div>
+            </section>
+<!--
+
+    <section class="contact_page" id="contact_page">
+        <img src="contact_page.jpeg" alt="error" />
+    </section>
+-->
+
+        </div>
+
+    </div>
+</body>
+
+</html>
