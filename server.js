@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post("/", (req, res) => {
   console.log("in post");
-  console.log("posted: ",req.body);
+ // console.log("posted: ",req.body);
  // receiveData(req.body);
 });
 
