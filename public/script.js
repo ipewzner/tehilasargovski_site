@@ -3,15 +3,7 @@ const submitForm = () => {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
-    /*
-        // Prepare data for API request
-        const data = {
-            lastname: 'name',
-            mobile: '054555555',
-            email: 'test@example.com'
-        };
-    
-        */
+ 
     // Prepare data for API request
     const data = new FormData();
     data.append('lastname', name);
@@ -48,7 +40,7 @@ function receiveData(indata) {
     data.append('lastname', 'name');
     data.append('mobile', 'phone');
     data.append('email', 'email');
-    data.append('publicid', '735d0f42f2e72931e062420fbd0ace7d'); // Add publicid to form data
+    data.append('publicid',  process.env.PUBLIC_ID); // Add publicid to form data
 
 
     // Create fetch options
