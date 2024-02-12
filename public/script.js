@@ -3,13 +3,13 @@ const submitForm = () => {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
- 
+
     // Prepare data for API request
     const data = new FormData();
     data.append('lastname', name);
     data.append('mobile', phone);
     data.append('email', email);
-    data.append('publicid', process.env.PUBLIC_ID); // Add publicid to form data
+    //data.append('publicid', process.env.PUBLIC_ID); // Add publicid to form data
 
     // Create fetch options
     const options = {
@@ -40,7 +40,7 @@ function receiveData(indata) {
     data.append('lastname', 'name');
     data.append('mobile', 'phone');
     data.append('email', 'email');
-    data.append('publicid',  process.env.PUBLIC_ID); // Add publicid to form data
+    data.append('publicid', process.env.PUBLIC_ID); // Add publicid to form data
 
 
     // Create fetch options
@@ -83,7 +83,9 @@ menuList.style.maxWidth = "0px"; // Change from "maxHeight" to "maxWidth"
 
 
 function sendData(options) {
-    fetch('https://netanel2.scallacrm.co.il/modules/Webforms/capture.php', options)
+    //fetch('https://netanel2.scallacrm.co.il/modules/Webforms/capture.php', options)
+    // fetch('http://localhost:3000', options) 
+    fetch('https://www.tehilasargovski.com/', options)
         .then(response => {
             if (!response.ok) { throw new Error('Network response was not ok'); }
             return response.json();
