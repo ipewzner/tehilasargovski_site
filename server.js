@@ -37,16 +37,18 @@ app.listen(PORT, () => { console.log(`Server is running on http://localhost:${PO
 
 function receiveData(indata) {
 
+  console.log('r1');
   console.log("Recived data from API:", indata);
-
+  
   const data = new FormData();
   
   data.append('publicid',  process.env.PUBLIC_ID); 
-
+  
   data.append('lastname', indata.lastname ? indata.lastname : '');
   data.append('mobile', indata.mobile ? indata.mobile : '');
   data.append('email', indata.email ? indata.email : '');
-
+  
+  console.log('r2');
 
   // Create fetch options
   const options = {
@@ -60,18 +62,27 @@ function receiveData(indata) {
   for (let entry of data.entries()) {
     console.log(entry[0] + ': ' + entry[1]);
   }
-
+  console.log('r3');
+  
+  
   // sendData(options)
   fetch('https://netanel2.scallacrm.co.il/modules/Webforms/capture.php', options)
-    .then(response => {
-      if (!response.ok) { throw new Error('Network response was not ok'); }
-      return response.json();
-    })
-    .then(data => {
+  .then(response => {
+    console.log('r4');
+    if (!response.ok) { throw new Error('Network response was not ok'); }
+    console.log('r5');
+    return response.json();
+    console.log('r6');
+  })
+  .then(data => {
+      console.log('r7');
       console.log('Data sent successfully:', data);
+      console.log('r8');
     })
     .catch(error => {
+      console.log('r9');
       console.error('Error sending data:', error);
+      console.log('r10');
     });
 }
 

@@ -87,10 +87,14 @@ function sendData(options) {
     // fetch('http://localhost:3000', options) 
     fetch('https://www.tehilasargovski.com/', options)
         .then(response => {
+            console.log('s1');
             if (!response.ok) { throw new Error('Network response was not ok'); }
+            console.log('s2');
             return response.json();
+            console.log('s3');
         })
         .then(data => {
+            console.log('s4');
             console.log('Data sent successfully:', data);
             // If you need to reset the form after submission, you can uncomment the following line
             // document.getElementById('myForm').reset();
@@ -99,7 +103,9 @@ function sendData(options) {
             openPopup();
         })
         .catch(error => {
+            console.log('s5');
             console.error('Error sending data:', error);
+            console.log('s6');
         });
 }
 
